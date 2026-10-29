@@ -1,22 +1,3 @@
----
-title: Industrial Predictive Maintenance - LightGBM + SHAP
-emoji: 🏭
-colorFrom: blue
-colorTo: indigo
-sdk: gradio
-sdk_version: 4.44.0
-app_file: app.py
-pinned: false
-license: mit
-tags:
-  - predictive-maintenance
-  - lightgbm
-  - shap
-  - explainable-ai
-  - industry-4.0
-  - machine-learning
----
-
 # 🏭 Industrial Predictive Maintenance: Explainable Machine Learning with LightGBM & SHAP
 
 [![Live Demo](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Space-blue?style=for-the-badge&logo=huggingface)](https://huggingface.co/spaces/iamvk09/predictive-maintenance-lgbm)
@@ -272,8 +253,10 @@ http://localhost:7860
 
 This application is deployed on **Hugging Face Spaces** using the native Gradio SDK.
 
-### Deployment Configuration
-The repository includes the required Hugging Face YAML metadata block at the top of this `README.md`:
+- **Live Application:** [https://huggingface.co/spaces/iamvk09/predictive-maintenance-lgbm](https://huggingface.co/spaces/iamvk09/predictive-maintenance-lgbm)
+
+### Space Configuration
+Hugging Face Spaces reads its configuration from the YAML frontmatter in `README.md` on the Space repository:
 ```yaml
 ---
 title: Industrial Predictive Maintenance - LightGBM + SHAP
@@ -285,18 +268,17 @@ sdk_version: 4.44.0
 app_file: app.py
 pinned: false
 license: mit
+tags:
+  - predictive-maintenance
+  - lightgbm
+  - shap
+  - explainable-ai
+  - industry-4.0
+  - machine-learning
 ---
 ```
 
-### Synchronizing Updates to Hugging Face
-If you maintain a separate Git remote for Hugging Face Spaces:
-```bash
-# Add Hugging Face Space as a remote
-git remote add space https://huggingface.co/spaces/iamvk09/predictive-maintenance-lgbm
-
-# Push to Hugging Face main branch
-git push space main
-```
+A dedicated copy with this metadata block is maintained in [`README_SPACE.md`](./README_SPACE.md) for the Hugging Face Space repository.
 
 ---
 
@@ -309,8 +291,9 @@ Industrial-Predictive-Maintenance/
 ├── lgbm_model.pkl          # Pre-trained LightGBM classification pipeline
 ├── Dockerfile              # Container definition for portable environments
 ├── DEPLOYMENT_GUIDE.md     # Detailed deployment instructions for cloud platforms
+├── README_SPACE.md         # Space deployment documentation (with HF YAML frontmatter)
 ├── .gitignore              # Clean Git exclusions (virtualenvs, cache, temp files)
-└── README.md               # Portfolio-ready technical documentation
+└── README.md               # GitHub portfolio presentation documentation
 ```
 
 ---
